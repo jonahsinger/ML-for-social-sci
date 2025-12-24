@@ -1,0 +1,19 @@
+feature_set,model,roc_auc,avg_precision,notes
+lifestyle_only,xgboost_tuned,0.7447887342033883,0.9225624531019395,"best_params={'subsample': 0.6, 'reg_lambda': 0.5, 'n_estimators': 800, 'min_child_weight': 5, 'max_depth': 4, 'learning_rate': 0.05, 'gamma': 2.0, 'colsample_bytree': 0.8}"
+lifestyle_only,mlp_tuned,0.7235467514161327,0.9132593706320176,"best_params={'learning_rate_init': 0.001, 'hidden_layer_sizes': (128, 64), 'alpha': 0.0001, 'activation': 'tanh'}"
+lifestyle_only,logreg_lasso_cv,0.6834114044707713,0.8922267275782858,best_C=0.0379269
+lifestyle_only,logreg_elasticnet_cv,0.6833891938582577,0.8922041543092857,"best_C=0.151991, best_l1=0.90"
+lifestyle_only,logreg_plain,0.6833863020329384,0.8922015410366684,C=1.0 (fixed)
+lifestyle_only,logreg_ridge_cv,0.6833821462028423,0.8922462347496474,best_C=0.00206914
+ses_only,xgboost_tuned,0.7833737924658268,0.9291441431554872,"best_params={'subsample': 1.0, 'reg_lambda': 1.0, 'n_estimators': 400, 'min_child_weight': 3, 'max_depth': 6, 'learning_rate': 0.03, 'gamma': 0.0, 'colsample_bytree': 0.6}"
+ses_only,mlp_tuned,0.779458012772577,0.9272916225366771,"best_params={'learning_rate_init': 0.005, 'hidden_layer_sizes': (128, 64), 'alpha': 0.0001, 'activation': 'relu'}"
+ses_only,logreg_elasticnet_cv,0.7538159902562998,0.9167330663807749,"best_C=0.001, best_l1=0.10"
+ses_only,logreg_ridge_cv,0.7537711746141803,0.9166771102317047,best_C=0.001
+ses_only,logreg_lasso_cv,0.7537120001498105,0.9166303628640897,best_C=0.00885867
+ses_only,logreg_plain,0.7536559002686801,0.9165574940698135,C=1.0 (fixed)
+ses_plus_lifestyle,xgboost_tuned,0.8155499023666815,0.944798385548666,"best_params={'subsample': 0.6, 'reg_lambda': 0.5, 'n_estimators': 800, 'min_child_weight': 5, 'max_depth': 4, 'learning_rate': 0.05, 'gamma': 2.0, 'colsample_bytree': 0.8}"
+ses_plus_lifestyle,mlp_tuned,0.8033793864732474,0.9392703683103583,"best_params={'learning_rate_init': 0.001, 'hidden_layer_sizes': (64, 32), 'alpha': 0.0001, 'activation': 'relu'}"
+ses_plus_lifestyle,logreg_elasticnet_cv,0.778182971542709,0.9284559943603979,"best_C=0.001, best_l1=0.10"
+ses_plus_lifestyle,logreg_ridge_cv,0.7781281012398633,0.9283897949503767,best_C=0.001
+ses_plus_lifestyle,logreg_lasso_cv,0.7780756220906401,0.9283607217063687,best_C=0.0183298
+ses_plus_lifestyle,logreg_plain,0.7780395053004918,0.9283156898457694,C=1.0 (fixed)
